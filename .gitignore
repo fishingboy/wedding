@@ -1,0 +1,16 @@
+*.DS_Store
+/apidoc
+/application/cache/*
+/application/config/database.php
+.sass-cache
+/node_modules
+.idea/*
+application/logs/*.php
+application/views_release/
+public/js_release/
+public/css_release/
+sessions/
+mnt_sessions
+vendor
+*.swp
+environment.php
