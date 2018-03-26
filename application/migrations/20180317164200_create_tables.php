@@ -32,6 +32,13 @@ class Migration_create_tables extends CI_Migration
                     'constraint' => '20',
                     'comment' => '手機',
                 ),
+            'postal_code' =>
+                array (
+                    'type' => 'varchar',
+                    'null' => false,
+                    'constraint' => '10',
+                    'comment' => '郵遞區號',
+                ),
             'address' =>
                 array (
                     'type' => 'varchar',

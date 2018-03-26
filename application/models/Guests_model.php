@@ -2,13 +2,13 @@
 
 include_once (__DIR__ . "/Model_base.php");
 
-class Groups_model extends Model_base
+class Guests_model extends Model_base
 {
     /**
      * 資料表
      * @var string
      */
-    protected $table = "groups";
+    protected $table = "guests";
 
     public function __construct()
     {
@@ -38,11 +38,5 @@ class Groups_model extends Model_base
     protected function verifyBeforeUpdate( & $params)
     {
         return true;
-    }
-
-    public function getGroups()
-    {
-        $groups = $this->CI->db->from("groups")->order_by('id', 'asc')->get()->result_array();
-        return $groups;
     }
 }
