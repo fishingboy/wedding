@@ -77,6 +77,8 @@
  ***************** YOUR LIBRARIES *****************
  * @property Api_lib                  $api_lib
  ***************** YOUR MODELS *****************
+ * @property Groups_model groups_model
+ * @property Guests_model guests_model
  */
 class CI_Controller {
     public function __construct() {
