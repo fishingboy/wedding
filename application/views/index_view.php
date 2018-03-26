@@ -78,11 +78,11 @@
 			<div class="form-content">
 				<div class="form-item">
 					<p class="form-title">請問您的大名：</p>
-					<input type="text" placeholder="輸入姓名">
+					<input id='fm_name' type="text" placeholder="輸入姓名">
 				</div>
 				<div class="form-item">
 					<p class="form-title">與新人的關係：</p>
-					<select>
+					<select id='fm_group_id'>
 						<option>男方親戚</option>
 						<option>男方同事</option>
 						<option>男方同學</option>
@@ -93,21 +93,21 @@
 				</div>
 				<div class="form-item">
 					<p class="form-title">共幾個人出席 (包含自己)：</p>
-					<input type="number" placeholder="請填入數字">
+					<input id='fm_peoples' type="number" placeholder="請填入數字">
 				</div>
 				<div class="form-item">
 					<p class="form-title">共幾位吃素：</p>
-					<input type="number" placeholder="請填入數字">
+					<input id='fm_vegan_peoples' type="number" placeholder="請填入數字">
 				</div>
 				<div class="form-item">
 					<p class="form-title">您的聯絡電話：</p>
-					<input type="tel" placeholder="請填入電話">
+					<input id='fm_phone' type="tel" placeholder="請填入電話">
 				</div>
 				<div class="form-item">
 					<p class="form-title">喜帖寄送地址：</p>
 					<div class="both-sides-containter">
-						<input class="left-wrp address_sm" type="number" placeholder="郵遞區號">
-						<input class="right-wrp address_lg" type="text" placeholder="詳細地址">
+						<input id='fm_postal_code' class="left-wrp address_sm" type="number" placeholder="郵遞區號">
+						<input id='fm_address' class="right-wrp address_lg" type="text" placeholder="詳細地址">
 					</div>
 				</div>
 				<a class="red-btn submit-btn" href="javascript:;">送出</a>
