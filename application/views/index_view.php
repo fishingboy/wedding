@@ -14,10 +14,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,600,600i" rel="stylesheet">
 
 	<!-- script -->
-    <script
-            src="https://code.jquery.com/jquery-1.12.4.min.js"
-            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
@@ -96,11 +93,11 @@
 				</div>
 				<div class="form-item">
 					<p class="form-title">共幾個人出席 (包含自己)：</p>
-					<input id='fm_peoples' type="number" placeholder="請填入數字">
+					<input id='fm_peoples' type="number" placeholder="請填入數字" value="1">
 				</div>
 				<div class="form-item">
 					<p class="form-title">共幾位吃素：</p>
-					<input id='fm_vegan_peoples' type="number" placeholder="請填入數字">
+					<input id='fm_vegan_peoples' type="number" placeholder="請填入數字" value="0">
 				</div>
 				<div class="form-item">
 					<p class="form-title">您的聯絡電話：</p>
@@ -113,7 +110,7 @@
 						<input id='fm_address' class="right-wrp address_lg" type="text" placeholder="詳細地址">
 					</div>
 				</div>
-				<a class="red-btn submit-btn" href="javascript:;">送出</a>
+				<a class="red-btn submit-btn" href="javascript:wedding.createGuest();">送出</a>
 			</div>
 		</section>
 	</div>

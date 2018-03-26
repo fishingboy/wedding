@@ -21,47 +21,47 @@ class Migration_create_tables extends CI_Migration
             'email' =>
                 array (
                     'type' => 'varchar',
-                    'null' => false,
+                    'null' => true,
                     'constraint' => '255',
                     'comment' => 'email',
                 ),
             'phone' =>
                 array (
                     'type' => 'varchar',
-                    'null' => false,
+                    'null' => true,
                     'constraint' => '20',
                     'comment' => '手機',
                 ),
             'postal_code' =>
                 array (
                     'type' => 'varchar',
-                    'null' => false,
+                    'null' => true,
                     'constraint' => '10',
                     'comment' => '郵遞區號',
                 ),
             'address' =>
                 array (
                     'type' => 'varchar',
-                    'null' => false,
+                    'null' => true,
                     'constraint' => '255',
                     'comment' => '地址',
                 ),
             'group_id' =>
                 array (
                     'type' => 'int',
-                    'null' => false,
+                    'null' => true,
                     'comment' => '分類編號',
                 ),
             'peoples' =>
                 array (
                     'type' => 'int',
-                    'null' => false,
+                    'null' => true,
                     'comment' => '人數',
                 ),
             'vegan_peoples' =>
                 array (
                     'type' => 'int',
-                    'null' => false,
+                    'null' => true,
                     'comment' => '素食人數',
                 ),
             'created_at' =>
