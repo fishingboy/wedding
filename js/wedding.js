@@ -5,6 +5,8 @@
         function init()
         {
             this.buildGroupSelect();
+
+            alert = swal;
         }
 
         function buildGroupSelect()
