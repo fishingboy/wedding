@@ -42,9 +42,9 @@
 			<div class="right-wrp">
 				<a href="javascript:;" class="header-menu"></a>
 				<ul>
-					<li><a href="javascript:;">結婚日期</a></li>
-					<li><a href="javascript:;">婚紗搶先看</a></li>
-					<li><a href="javascript:;">出席回覆</a></li>
+					<li><a href="javascript:wedding.scroll('#date');">結婚日期</a></li>
+					<li><a href="javascript:wedding.scroll('#photo');;">婚紗搶先看</a></li>
+					<li><a href="javascript:wedding.scroll('#form');">出席回覆</a></li>
 				</ul>
 			</div>
 		</div>
@@ -60,21 +60,23 @@
 		</section>
 
 		<!-- Date and Location -->
-		<section class="container white-bg-container">
+		<section id='date' class="container white-bg-container">
 			<h5 class="title">結婚日期</h5>
 			<div class="text-content">
 				<p class="date-text">2018/06/03(日) 中午12:30</p>
 				<p class="location-text">北都大飯店<br>基隆市中正區信二路319號</p>
-				<a class="red-btn" href="javascript:;">出席回覆</a>
+				<a class="red-btn" href="javascript:wedding.scroll('#form');">出席回覆</a>
 			</div>
 			
 		</section>
-		<section class="white-bg-container">
+
+
+		<section id="photo" class="white-bg-container">
 			<div class="gmap-content"></div>
 		</section>
 
-		<!-- Invite From -->
-		<section class="container white-bg-container">
+		<!-- Invite Form -->
+		<section id='form' class="container white-bg-container">
 			<h5 class="title">出席回覆</h5>
 			<div class="form-content">
 				<div class="form-item">

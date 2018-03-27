@@ -71,10 +71,18 @@
             });
         }
 
+        // 捲動效果
+        function scroll(id)
+        {
+            var top = $(id).offset().top;
+            $("html,body").animate({scrollTop: top + -40 + 'px'}, 1500);
+        }
+
         return {
             init : init,
             buildGroupSelect : buildGroupSelect,
-            createGuest : createGuest
+            createGuest : createGuest,
+            scroll : scroll
         }
     }
 
