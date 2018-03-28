@@ -1,17 +1,18 @@
 <?php
 
 
-class Home extends CI_Controller
+class Photo extends CI_Controller
 {
     public function __construct()
     {
         parent::__construct();
+        $this->load->library("api_lib");
         $this->load->library("tool_serv");
     }
 
-    public function index()
+    public function get()
     {
         $photos = $this->tool_serv->getPhotos();
-        $this->load->view("index_view", ['photos' => $photos]);
+        $this->api_lib->output(['photos' => $photos]);
     }
 }

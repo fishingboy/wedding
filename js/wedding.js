@@ -4,9 +4,11 @@
     {
         function init()
         {
-            this.buildGroupSelect();
-
+            // 設定 sweet alert
             alert = swal;
+
+            // 建立下拉選單
+            this.buildGroupSelect();
         }
 
         function buildGroupSelect()
@@ -92,4 +94,12 @@
 // 呼叫
 $(function () {
     wedding.init();
+
+    $.fn.extend({
+        underscore: function (object, data) {
+            data = data || false;      // 設成 'auto' or false
+            var template = _.template($(object).html()); // id => '#aaa-bbb'
+            $(this).html(template(data));
+        }
+    });
 });

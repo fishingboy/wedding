@@ -78,6 +78,7 @@
  * @property Api_lib                  $api_lib
  * @property Group_serv               $group_serv
  * @property Guest_serv               $guest_serv
+ * @property Tool_serv               $tool_serv
  ***************** YOUR MODELS *****************
  * @property Groups_model groups_model
  * @property Guests_model guests_model
