@@ -72,7 +72,9 @@
 
 
 		<section id="photo" class="white-bg-container">
-			<div class="gmap-content"></div>
+			<div class="gmap-content">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57794.05985416207!2d121.74550300000001!3d25.131338!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x15b579de5d61989b!2z5YyX6YO95aSn6aOv5bqX!5e0!3m2!1szh-TW!2sus!4v1510629984471" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
 		</section>
 
 		<!-- Invite Form -->
