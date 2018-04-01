@@ -89,6 +89,7 @@
                 <?php if ($i >= 8) break; ?>
                 <div class="photo">
                     <img class="<?= $photo['type'] ?>" src="<?= $photo['file'] ?>" alt="">
+                    <div class="image-overlay"></div>
                 </div>
             <?php endforeach; ?>
         </div>

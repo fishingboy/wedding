@@ -78,6 +78,22 @@ body{
 .photo-content .photo img {position:absolute; max-width:400px; max-height: 400px;}
 .photo-content .photo img.horizontal {left:-67px;}
 .photo-content .photo img.straight {top:-67px}
+.photo-content .photo .image-overlay {
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    display:inline-block;
+    background-color:rgba(255,255,255,.4);
+    opacity:0;
+    -webkit-transition:opacity .2s ease-out;
+    -moz-transition:opacity .2s ease-out;
+    transition:opacity .2s ease-out
+}
+.photo-content .photo:hover .image-overlay{
+    opacity:1
+}
 
 @media screen and ( max-width:415px) {
 	.full-banner-container,
