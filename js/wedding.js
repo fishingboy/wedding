@@ -40,8 +40,8 @@
             $("#overlay-close").bind("click", function (event) {
                 _self.cancelFullScreen(event);
             });
-            $("#overlay-priv").bind("click", function (event) {
-                _self.privPhoto();
+            $("#overlay-prev").bind("click", function (event) {
+                _self.prevPhoto();
             });
             $("#overlay-next").bind("click", function (event) {
                 _self.nextPhoto();
@@ -161,21 +161,32 @@
 
         function nextPhoto()
         {
-            var next_sn = this.sn + 1;
-            next_sn = (next_sn > 8) ? 1 : next_sn;
-            this.setFullScreenPhoto(next_sn);
+            if (this.sn == 7) {
+                swal({
+                    title: "沒有了唷",
+                    text: "已經沒有下一張囉！"
+                });
+                return false;
+            }
+            this.setFullScreenPhoto(this.sn + 1);
         }
 
-        function privPhoto()
+        function prevPhoto()
         {
-            var priv_sn = this.sn - 1;
-            priv_sn = (priv_sn < 1) ? 8 : priv_sn;
-            this.setFullScreenPhoto(priv_sn);
+            if (this.sn == 0) {
+                swal({
+                    title: "沒有了唷",
+                    text: "已經沒有上一張囉！"
+                });
+                return false;
+            }
+            this.setFullScreenPhoto(this.sn - 1);
         }
 
         function setFullScreenPhoto(sn)
         {
-            this.sn = sn;
+            this.sn = parseInt(sn);
+            console.log("sn", sn);
             $("#full-photo").css("background-image", "url(" + photos[sn].file + ")");
         }
 
@@ -199,7 +210,7 @@
             fullScreen : fullScreen,
             cancelFullScreen : cancelFullScreen,
             nextPhoto : nextPhoto,
-            privPhoto : privPhoto,
+            prevPhoto : prevPhoto,
             setFullScreenPhoto : setFullScreenPhoto,
             showMenu : showMenu,
             hideMenu : hideMenu,
