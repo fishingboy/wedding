@@ -75,7 +75,7 @@
         function createGuest()
         {
             var name = $('#fm_name').val();
-            var email = $('#fm_email').val();
+            // var email = $('#fm_email').val();
             var phone = $('#fm_phone').val();
             var group_id = $('#fm_group_id').val();
             var postal_code = $('#fm_postal_code').val();
@@ -85,7 +85,7 @@
 
             var guest_data = {
                 name : name,
-                email : email,
+                // email : email,
                 phone : phone,
                 group_id : group_id,
                 postal_code : postal_code,
@@ -105,6 +105,14 @@
                 },
                 success  : function(data)
                 {
+                    if ( ! data.status) {
+                        var error = data.msg.split("@@@");
+                        var field = error[0];
+                        var msg = error[1];
+                        alert(msg);
+                        $('#fm_' + field).focus();
+                        return false;
+                    }
                     alert("感謝你的填寫！");
                 }
             });

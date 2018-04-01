@@ -13,14 +13,14 @@ class Guest extends CI_Controller
 
     public function create()
     {
-        $name          = $this->api_lib->getParam("name","required");
-        $email         = $this->api_lib->getParam("email","");
-        $phone         = $this->api_lib->getParam("phone","");
-        $postal_code   = $this->api_lib->getParam("postal_code","");
-        $address       = $this->api_lib->getParam("address","");
-        $group_id      = $this->api_lib->getParam("group_id","");
-        $peoples       = $this->api_lib->getParam("peoples","required|integer");
-        $vegan_peoples = $this->api_lib->getParam("vegan_peoples","required|integer");
+        $name          = $this->api_lib->getParam("name");
+        $email         = $this->api_lib->getParam("email");
+        $phone         = $this->api_lib->getParam("phone");
+        $postal_code   = $this->api_lib->getParam("postal_code");
+        $address       = $this->api_lib->getParam("address");
+        $group_id      = $this->api_lib->getParam("group_id");
+        $peoples       = $this->api_lib->getParam("peoples");
+        $vegan_peoples = $this->api_lib->getParam("vegan_peoples");
 
         $id = $this->guest_serv->create([
             "name" => $name,
