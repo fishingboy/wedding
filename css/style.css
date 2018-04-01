@@ -134,6 +134,11 @@ body{
 	.photo-content {padding:10px; margin: 0 auto; width: 600px;}
 }
 
+
+@media screen and ( max-width:599px) {
+	.photo-content {width: 310px;}
+}
+
 @media screen and ( max-width:415px) {
 	.full-banner-container,
 	.full-banner-container .overlay-bg{ min-height: 100%; }
@@ -153,6 +158,4 @@ body{
 	.full-banner-container .banner-words-block .lg-title{ font-size: 36px; margin-bottom: 10px;}
 	.full-banner-container .banner-words-block .sm-title{ font-size: 16px; }
 	.photo-bg-container .form-block{ margin: 0 10px; border-radius: 10px;}
-
-	.photo-content {width: 310px;}
 }
