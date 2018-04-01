@@ -47,6 +47,8 @@ body{
 .full-banner-container .banner-words-block .lg-title{ font-size: 56px; font-weight: 600; font-style: italic; margin-bottom: 10px;}
 .full-banner-container .banner-words-block .sm-title{ font-size: 24px; font-weight: 300; font-style: italic; margin-bottom: 0;}
 
+.menu-items-hidden {};
+
 .gmap-content{ min-height: 400px; width: 100%;}
 
 .white-bg-container{ padding: 50px 0; }
@@ -147,7 +149,7 @@ body{
 	.full-header-fixed.header-bg-white{ height: 60px;}
 	.full-header-fixed.header-bg-white .left-wrp i.logo{ height: 60px; background-size: auto 34px;}
 	.full-header-fixed .right-wrp a.header-menu{ display: block; margin-top: 14px;}
-	.full-header-fixed .right-wrp ul{ display: none; background-color: rgba(30,30,30,0.8); position: fixed; top: 60px; right: 10px; min-width: 160px; border-radius: 6px; }
+	.full-header-fixed .right-wrp ul{background-color: rgba(30,30,30,0.8); position: fixed; top: 60px; right: 10px; min-width: 160px; border-radius: 6px; }
 	.full-header-fixed .right-wrp ul:after{ content: ""; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 8px solid rgba(30,30,30,0.8); position: absolute; top: -8px; right: 15px;}
 	.full-header-fixed .right-wrp ul li{ float: none; width: 100%; text-align: center; }
 	.full-header-fixed .right-wrp ul li a{ padding: 8px 16px; line-height: 40px;}
@@ -158,4 +160,5 @@ body{
 	.full-banner-container .banner-words-block .lg-title{ font-size: 36px; margin-bottom: 10px;}
 	.full-banner-container .banner-words-block .sm-title{ font-size: 16px; }
 	.photo-bg-container .form-block{ margin: 0 10px; border-radius: 10px;}
+	.menu-items-hidden {display: none;};
 }

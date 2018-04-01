@@ -164,12 +164,14 @@
 
         function showMenu()
         {
-            $(".full-header-fixed ul").slideDown();
+            // $(".full-header-fixed ul").slideDown();
+            $(".full-header-fixed ul").removeClass("menu-items-hidden");
         }
         
         function hideMenu()
         {
-            $(".full-header-fixed ul").slideUp();
+            // $(".full-header-fixed ul").slideUp();
+            $(".full-header-fixed ul").addClass("menu-items-hidden");
         }
 
         return {

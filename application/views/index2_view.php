@@ -31,7 +31,7 @@
         <div class="left-wrp"><i class="logo"></i></div>
         <div class="right-wrp">
             <a href="javascript:;" class="header-menu"></a>
-            <ul>
+            <ul id="menu-items" class="menu-items-hidden">
                 <li><a href="javascript:wedding.scroll('#date');">結婚日期</a></li>
                 <li><a href="javascript:wedding.scroll('#photo');">婚紗搶先看</a></li>
                 <li><a href="javascript:wedding.scroll('#form');">出席回覆</a></li>
