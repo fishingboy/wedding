@@ -19,23 +19,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-        $(function(){
-            // 透明header底色轉換＋固定在頁面上方
-            $(window).scroll(function() {
-                if ( $(this).scrollTop() > 100){
-                    $(".full-header-fixed").addClass("header-bg-white");
-                }
-                if ( $(this).scrollTop() < 1){
-                    $(".full-header-fixed").removeClass("header-bg-white");
-                }
-            });
-
-            $(".header-menu").click(function(){
-                $(".full-header-fixed ul").show();
-            })
-
-        });
-
         var photos = <?= json_encode($photos) ?>;
     </script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -119,11 +102,11 @@
                 </div>
                 <div class="form-item">
                     <p class="form-title">共幾個人出席 (包含自己)：</p>
-                    <input id='fm_peoples' type="number" placeholder="請填入數字" value="1">
+                    <input id='fm_peoples' type="number" placeholder="請填入數字" value="1" min="1">
                 </div>
                 <div class="form-item">
                     <p class="form-title">共幾位吃素：</p>
-                    <input id='fm_vegan_peoples' type="number" placeholder="請填入數字" value="0">
+                    <input id='fm_vegan_peoples' type="number" placeholder="請填入數字" value="0" min="0">
                 </div>
                 <div class="form-item">
                     <p class="form-title">您的聯絡電話：</p>

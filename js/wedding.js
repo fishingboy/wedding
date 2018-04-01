@@ -6,14 +6,34 @@
 
         function init()
         {
+            var _self = this;
+
             // 設定 sweet alert
             alert = swal;
 
             // 建立下拉選單
             this.buildGroupSelect();
 
-            //
-            var _self = this;
+            // 透明header底色轉換＋固定在頁面上方
+            $(window).scroll(function() {
+                if ( $(this).scrollTop() > 100){
+                    $(".full-header-fixed").addClass("header-bg-white");
+                }
+                if ( $(this).scrollTop() < 1){
+                    $(".full-header-fixed").removeClass("header-bg-white");
+                }
+            });
+
+            // menu
+            $(".header-menu").click(function(event) {
+                _self.showMenu();
+                event.stopPropagation();
+            });
+            $("html,body").click(function() {
+                _self.hideMenu();
+            });
+
+            // 全螢幕照片
             $(".photo img, .photo .image-overlay").bind("click", function (event) {
                 _self.fullScreen(event);
             });
@@ -95,6 +115,7 @@
         {
             var top = $(id).offset().top - 70;
             $("html,body").animate({scrollTop: top + 'px'}, 1500);
+            this.hideMenu();
         }
 
         function fullScreen(event)
@@ -133,6 +154,16 @@
             $("#full-photo").css("background-image", "url(" + photos[sn].file + ")");
         }
 
+        function showMenu()
+        {
+            $(".full-header-fixed ul").slideDown();
+        }
+        
+        function hideMenu()
+        {
+            $(".full-header-fixed ul").slideUp();
+        }
+
         return {
             sn : sn,
             init : init,
@@ -143,6 +174,8 @@
             nextPhoto : nextPhoto,
             privPhoto : privPhoto,
             setFullScreenPhoto : setFullScreenPhoto,
+            showMenu : showMenu,
+            hideMenu : hideMenu,
             scroll : scroll
         }
     }
