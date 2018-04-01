@@ -115,7 +115,7 @@
                 <div class="form-item">
                     <p class="form-title">喜帖寄送地址：</p>
                     <div class="both-sides-containter">
-                        <input id='fm_postal_code' class="left-wrp address_sm" type="number" placeholder="郵遞區號">
+                        <input id='fm_postal_code' class="address_sm" type="number" placeholder="郵遞區號">
                         <a class="address-btn" href="https://www.post.gov.tw/post/internet/Postal/index.jsp?ID=208" target="_blank">查詢郵遞區號</a>
                         <br>
                         <input id='fm_address' class="right-wrp address_lg" type="text" placeholder="詳細地址">
