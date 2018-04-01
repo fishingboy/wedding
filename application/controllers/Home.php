@@ -25,4 +25,10 @@ class Home extends CI_Controller
         $photos = $this->tool_serv->getPhotos();
         $this->load->view("index2_view", ['photos' => $photos]);
     }
+
+    public function updateHook()
+    {
+        touch("/tmp/wedding.update.touch");
+        echo "touch success!!";
+    }
 }
