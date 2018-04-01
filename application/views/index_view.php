@@ -34,11 +34,6 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="http://underscorejs.org/underscore-min.js"></script>
     <script src="/js/wedding.js"></script>
-    <script type="text/template" id="photo-tmp">
-        <div class="photo">
-            <img src="<%= %>" alt="">
-        </div>
-    </script>
 
 
 </head>
