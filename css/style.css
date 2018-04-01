@@ -76,7 +76,7 @@ body{
 
 
 .photo-content {padding:10px; margin: 0 auto; width: 1180px;}
-.photo-content .photo {display: inline-block; margin: 10px; width:266px; height:266px; overflow: hidden; position: relative;}
+.photo-content .photo {display: inline-block; margin: 10px; width:266px; height:266px; overflow: hidden; position: relative; border-radius: 20px;}
 .photo-content .photo img {position:absolute; max-width:400px; max-height: 400px;}
 .photo-content .photo img.horizontal {left:-67px;}
 .photo-content .photo img.straight {top:-67px}
