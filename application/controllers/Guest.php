@@ -21,6 +21,7 @@ class Guest extends CI_Controller
         $group_id      = $this->api_lib->getParam("group_id");
         $peoples       = $this->api_lib->getParam("peoples");
         $vegan_peoples = $this->api_lib->getParam("vegan_peoples");
+        $say           = $this->api_lib->getParam("say");
 
         $id = $this->guest_serv->create([
             "name" => $name,
@@ -31,6 +32,7 @@ class Guest extends CI_Controller
             "group_id" => $group_id,
             "peoples" => $peoples,
             "vegan_peoples" => $vegan_peoples,
+            "say" => $say,
         ]);
         if ( ! $id) {
             $this->api_lib->outputError(ErrorStack::pop());

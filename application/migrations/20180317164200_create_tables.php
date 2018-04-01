@@ -71,6 +71,12 @@ class Migration_create_tables extends CI_Migration
                     'null' => true,
                     'comment' => '素食人數',
                 ),
+            'say' =>
+                array (
+                    'type' => 'text',
+                    'null' => true,
+                    'comment' => '想說的話',
+                ),
             'is_delete' =>
                 array (
                     'type' => 'boolean',

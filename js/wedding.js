@@ -82,6 +82,7 @@
             var address = $('#fm_address').val();
             var peoples = $('#fm_peoples').val();
             var vegan_peoples = $('#fm_vegan_peoples').val();
+            var say = $('#fm_say').val();
 
             var guest_data = {
                 name : name,
@@ -91,7 +92,8 @@
                 postal_code : postal_code,
                 address : address,
                 peoples : peoples,
-                vegan_peoples : vegan_peoples
+                vegan_peoples : vegan_peoples,
+                say : say
             };
 
             $.ajax

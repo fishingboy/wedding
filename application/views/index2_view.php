@@ -121,6 +121,10 @@
                         <input id='fm_address' class="right-wrp address_lg" type="text" placeholder="詳細地址">
                     </div>
                 </div>
+                <div class="form-item">
+                    <p class="form-title">有沒有什麼想說的話：</p>
+                    <textarea id="fm_say" rows="3"></textarea>
+                </div>
                 <a class="red-btn submit-btn"  href="javascript:wedding.createGuest();">送出</a>
             </div>
         </div>
