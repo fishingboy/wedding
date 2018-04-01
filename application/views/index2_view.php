@@ -1,3 +1,6 @@
+<!--
+    不要偷看原始碼啦，資料填好了沒？
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -92,12 +95,7 @@
                 <div class="form-item">
                     <p class="form-title">與新人的關係：</p>
                     <select id='fm_group_id'>
-                        <option>男方親戚</option>
-                        <option>男方同事</option>
-                        <option>男方同學</option>
-                        <option>女方親戚</option>
-                        <option>女方同事</option>
-                        <option>女方同學</option>
+                        <option>-</option>
                     </select>
                 </div>
                 <div class="form-item">
@@ -141,3 +139,7 @@
 
 </body>
 </html>
+<!--
+畫面設計 : Evonne
+程式實作 : Leo
+-->
