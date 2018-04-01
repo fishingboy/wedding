@@ -113,7 +113,7 @@
                         swal({
                             title: "資料發生錯誤",
                             text: msg,
-                            type: "warning",
+                            type: "warning"
                         }).then(function () {
                             $('#fm_' + field).focus();
                         });
@@ -122,9 +122,12 @@
                     swal({
                             title: "感謝您的填寫",
                             text: "期待婚禮上見囉 ^^！",
-                            type: "success",
+                            type: "success"
                     }).then(function () {
-                        window.location.reload(true);
+                        $("html,body").animate({scrollTop: '0px'}, 500);
+                        window.setTimeout(function () {
+                            window.location.reload(true);
+                        }, 500);
                     });
                 }
             });
