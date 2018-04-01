@@ -110,10 +110,22 @@
                         var field = error[0];
                         var msg = error[1];
                         alert(msg);
-                        $('#fm_' + field).focus();
+                        swal({
+                            title: "資料發生錯誤",
+                            text: msg,
+                            type: "warning",
+                        }).then(function () {
+                            $('#fm_' + field).focus();
+                        });
                         return false;
                     }
-                    alert("感謝你的填寫！");
+                    swal({
+                            title: "感謝您的填寫",
+                            text: "期待婚禮上見囉 ^^！",
+                            type: "success",
+                    }).then(function () {
+                        window.location.reload(true);
+                    });
                 }
             });
         }
