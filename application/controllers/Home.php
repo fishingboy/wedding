@@ -11,6 +11,11 @@ class Home extends CI_Controller
 
     public function index()
     {
+        $this->index2();
+    }
+
+    public function index1()
+    {
         $photos = $this->tool_serv->getPhotos();
         $this->load->view("index_view", ['photos' => $photos]);
     }
