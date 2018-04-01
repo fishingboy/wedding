@@ -70,7 +70,7 @@
         <div class="text-content">
             <p class="date-text">2018/06/03(日) 中午12:30</p>
             <p class="location-text">北都大飯店<br>基隆市中正區信二路319號</p>
-            <a class="red-btn" href="javascript:;">出席回覆</a>
+            <a class="red-btn" href="javascript:wedding.scroll('#form');">出席回覆</a>
         </div>
     </section>
 
