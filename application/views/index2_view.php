@@ -38,7 +38,7 @@
     </script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="http://underscorejs.org/underscore-min.js"></script>
-    <script src="/js/wedding.js"></script>
+    <script src="/js/wedding.js?<?= time() ?>"></script>
 </head>
 <body>
 <header class="full-header-fixed">
@@ -47,9 +47,9 @@
         <div class="right-wrp">
             <a href="javascript:;" class="header-menu"></a>
             <ul>
-                <li><a href="javascript:;">結婚日期</a></li>
-                <li><a href="javascript:;">婚紗搶先看</a></li>
-                <li><a href="javascript:;">出席回覆</a></li>
+                <li><a href="javascript:wedding.scroll('#date');">結婚日期</a></li>
+                <li><a href="javascript:wedding.scroll('#photo');">婚紗搶先看</a></li>
+                <li><a href="javascript:wedding.scroll('#form');">出席回覆</a></li>
             </ul>
         </div>
     </div>
@@ -65,7 +65,7 @@
     </section>
 
     <!-- Date and Location -->
-    <section class="container white-bg-container">
+    <section id='date' class="container white-bg-container">
         <h5 class="title">結婚日期</h5>
         <div class="text-content">
             <p class="date-text">2018/06/03(日) 中午12:30</p>
@@ -95,17 +95,17 @@
     </section>
 
     <!-- Invite From -->
-    <section class="white-bg-container photo-bg-container">
+    <section id='form' class="white-bg-container photo-bg-container">
         <div class="form-block">
             <h5 class="title">出席回覆</h5>
             <div class="form-content">
                 <div class="form-item">
                     <p class="form-title">請問您的大名：</p>
-                    <input type="text" placeholder="輸入姓名">
+                    <input id='fm_name' type="text" placeholder="輸入姓名">
                 </div>
                 <div class="form-item">
                     <p class="form-title">與新人的關係：</p>
-                    <select>
+                    <select id='fm_group_id'>
                         <option>男方親戚</option>
                         <option>男方同事</option>
                         <option>男方同學</option>
@@ -116,25 +116,25 @@
                 </div>
                 <div class="form-item">
                     <p class="form-title">共幾個人出席 (包含自己)：</p>
-                    <input type="number" placeholder="請填入數字" value="1">
+                    <input id='fm_peoples' type="number" placeholder="請填入數字" value="1">
                 </div>
                 <div class="form-item">
                     <p class="form-title">共幾位吃素：</p>
-                    <input type="number" placeholder="請填入數字" value="0">
+                    <input id='fm_vegan_peoples' type="number" placeholder="請填入數字" value="0">
                 </div>
                 <div class="form-item">
                     <p class="form-title">您的聯絡電話：</p>
-                    <input type="tel" placeholder="請填入電話">
+                    <input id='fm_phone' type="tel" placeholder="請填入電話">
                 </div>
                 <div class="form-item">
                     <p class="form-title">喜帖寄送地址：</p>
                     <div class="both-sides-containter">
-                        <input class="left-wrp address_sm" type="number" placeholder="郵遞區號">
-                        <input class="right-wrp address_lg" type="text" placeholder="詳細地址">
+                        <input id='fm_postal_code' class="left-wrp address_sm" type="number" placeholder="郵遞區號">
+                        <input id='fm_address' class="right-wrp address_lg" type="text" placeholder="詳細地址">
                         <a class="address-btn" href="https://www.post.gov.tw/post/internet/Postal/index.jsp?ID=208" target="_blank">查詢郵遞區號</a>
                     </div>
                 </div>
-                <a class="red-btn submit-btn" href="javascript:;">送出</a>
+                <a class="red-btn submit-btn"  href="javascript:wedding.createGuest();">送出</a>
             </div>
         </div>
     </section>

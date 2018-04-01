@@ -76,8 +76,8 @@
         // 捲動效果
         function scroll(id)
         {
-            var top = $(id).offset().top;
-            $("html,body").animate({scrollTop: top + -40 + 'px'}, 1500);
+            var top = $(id).offset().top - 70;
+            $("html,body").animate({scrollTop: top + 'px'}, 1500);
         }
 
         return {
