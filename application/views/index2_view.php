@@ -143,13 +143,13 @@
     </section>
 </div>
 
+<!-- 相片全螢幕檢視 -->
 <div class="photo-overlay">
     <div id="overlay-close" class="icon photo-overlay-close"></div>
     <div id="overlay-prev" class="icon photo-overlay-prev"></div>
     <div id="overlay-next" class="icon photo-overlay-next"></div>
     <div id="full-photo"></div>
 </div>
-<!--<div class="photo-full-screen">-->
-<!--    <img src="" alt="">-->
-<!--</div>-->
+
 </body>
+</html>

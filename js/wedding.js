@@ -2,6 +2,8 @@
 {
     function Wedding()
     {
+        var sn;
+
         function init()
         {
             // 設定 sweet alert
@@ -17,6 +19,12 @@
             });
             $("#overlay-close").bind("click", function (event) {
                 _self.cancelFullScreen(event);
+            });
+            $("#overlay-priv").bind("click", function (event) {
+                _self.privPhoto();
+            });
+            $("#overlay-next").bind("click", function (event) {
+                _self.nextPhoto();
             });
         }
 
@@ -97,21 +105,44 @@
             var sn = element.attr("photo-sn");
 
             // 塞入圖片
-            // $("#full-photo").attr("src", photos[sn].file);
-            $("#full-photo").css("background-image", "url(" + photos[sn].file + ")");
+            this.setFullScreenPhoto(sn);
         }
 
         function cancelFullScreen()
         {
             $(".photo-overlay").hide();
         }
-        
+
+        function nextPhoto()
+        {
+            var next_sn = this.sn + 1;
+            next_sn = (next_sn > 8) ? 1 : next_sn;
+            this.setFullScreenPhoto(next_sn);
+        }
+
+        function privPhoto()
+        {
+            var priv_sn = this.sn - 1;
+            priv_sn = (priv_sn < 1) ? 8 : priv_sn;
+            this.setFullScreenPhoto(priv_sn);
+        }
+
+        function setFullScreenPhoto(sn)
+        {
+            this.sn = sn;
+            $("#full-photo").css("background-image", "url(" + photos[sn].file + ")");
+        }
+
         return {
+            sn : sn,
             init : init,
             buildGroupSelect : buildGroupSelect,
             createGuest : createGuest,
             fullScreen : fullScreen,
             cancelFullScreen : cancelFullScreen,
+            nextPhoto : nextPhoto,
+            privPhoto : privPhoto,
+            setFullScreenPhoto : setFullScreenPhoto,
             scroll : scroll
         }
     }
