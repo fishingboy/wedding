@@ -113,7 +113,7 @@ body{
 	display: none;
 }
 .photo-overlay .icon {position:absolute; background-size: 28px 28px; width:52px; height:52px; background-position: center center; background-repeat: no-repeat; border-radius: 50%;}
-.photo-overlay .icon:hover {background-color: rgba(0,0,0,0.3);}
+.photo-overlay .icon:active {background-color: rgba(0,0,0,0.3);}
 .photo-overlay .photo-overlay-close {right: 20px; top: 20px; background-image: url("/images/icon/cancel.png");}
 .photo-overlay .photo-overlay-prev {left: 20px; top: 50%; background-image: url("/images/icon/prev2.png");}
 .photo-overlay .photo-overlay-next {right: 20px; top: 50%; background-image: url("/images/icon/next.png");}
