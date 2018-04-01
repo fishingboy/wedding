@@ -52,6 +52,13 @@ class Migration_create_tables extends CI_Migration
                     'null' => true,
                     'comment' => '分類編號',
                 ),
+            'group_name' =>
+                array (
+                    'type' => 'varchar',
+                    'constraint' => '20',
+                    'null' => true,
+                    'comment' => '分類名稱',
+                ),
             'peoples' =>
                 array (
                     'type' => 'int',
@@ -63,6 +70,13 @@ class Migration_create_tables extends CI_Migration
                     'type' => 'int',
                     'null' => true,
                     'comment' => '素食人數',
+                ),
+            'is_delete' =>
+                array (
+                    'type' => 'boolean',
+                    'null' => true,
+                    'comment' => '是否已刪除',
+                    'default' => 0,
                 ),
             'created_at' =>
                 array (
@@ -106,5 +120,6 @@ class Migration_create_tables extends CI_Migration
     public function down()
     {
         $this->dbforge->drop_table('guests', TRUE);
-        $this->dbforge->drop_table('groups', TRUE);    }
+        $this->dbforge->drop_table('groups', TRUE);
+    }
 }

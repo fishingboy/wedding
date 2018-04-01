@@ -45,4 +45,10 @@ class Groups_model extends Model_base
         $groups = $this->CI->db->from("groups")->order_by('id', 'asc')->get()->result_array();
         return $groups;
     }
+
+    public function getGroupName($group_id)
+    {
+        $group = $this->CI->db->from("groups")->where('id', $group_id)->get()->row_array();
+        return $group ? $group['name'] : 'xxx';
+    }
 }
