@@ -28,7 +28,7 @@ class Home extends CI_Controller
 
     public function updateHook()
     {
-        touch("/tmp/wedding.update.touch");
+        touch("/tmp/wedding.update.hook");
         echo "touch success!!";
     }
 }
