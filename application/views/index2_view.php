@@ -144,7 +144,9 @@
 </div>
 
 <div class="photo-overlay">
-    <div id="overlay-close" class="photo-overlay-close">X</div>
+    <div id="overlay-close" class="icon photo-overlay-close"></div>
+    <div id="overlay-prev" class="icon photo-overlay-prev"></div>
+    <div id="overlay-next" class="icon photo-overlay-next"></div>
     <img id="full-photo" src="" alt="">
 </div>
 <!--<div class="photo-full-screen">-->
