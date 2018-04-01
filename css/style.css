@@ -119,6 +119,10 @@ body{
 .photo-overlay .photo-overlay-next {right: 20px; top: 50%; background-image: url("/images/icon/next.png");}
 .photo-overlay #full-photo {margin:0 auto; width: 100%; height:100%; z-index:2; background-size: auto 100%; background-repeat: no-repeat; background-position: center center;}
 
+
+@media screen and ( max-width:1023px) {
+	.photo-overlay #full-photo {margin:0 auto; width: 100%; height:100%; z-index:2; background-size: 100% auto; background-repeat: no-repeat; background-position: center center;}
+}
 @media screen and ( max-width:415px) {
 	.full-banner-container,
 	.full-banner-container .overlay-bg{ min-height: 100%; }
@@ -140,5 +144,4 @@ body{
 	.photo-bg-container .form-block{ margin: 0 10px; border-radius: 10px;}
 
 	.photo-content {width: 310px;}
-	.photo-overlay #full-photo {margin:0 auto; width: 100%; height:100%; z-index:2; background-size: 100% auto; background-repeat: no-repeat; background-position: center center;}
 }
