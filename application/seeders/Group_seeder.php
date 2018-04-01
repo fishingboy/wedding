@@ -21,7 +21,7 @@ class Group_seeder extends Seeder_base
             ["name" => "女方同學"],
             ["name" => "女方同事"],
             ["name" => "女方朋友"],
-            ["name" => "男方親威"],
+            ["name" => "女方親威"],
         ];
 
         $n = 0;
