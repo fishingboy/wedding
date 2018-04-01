@@ -35,6 +35,8 @@
             })
 
         });
+
+        var photos = <?= json_encode($photos) ?>;
     </script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="http://underscorejs.org/underscore-min.js"></script>
@@ -88,8 +90,8 @@
             <?php foreach($photos as $i => $photo) :?>
                 <?php if ($i >= 8) break; ?>
                 <div class="photo">
-                    <img class="<?= $photo['type'] ?>" src="<?= $photo['file'] ?>" alt="">
-                    <div class="image-overlay"></div>
+                    <img class="<?= $photo['type'] ?>" src="<?= $photo['file'] ?>" alt="" photo-sn="<?= $i ?>">
+                    <div class="image-overlay" photo-sn="<?= $i ?>"></div>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -141,4 +143,11 @@
     </section>
 </div>
 
+<div class="photo-overlay">
+    <div id="overlay-close" class="photo-overlay-close">X</div>
+    <img id="full-photo" src="" alt="">
+</div>
+<!--<div class="photo-full-screen">-->
+<!--    <img src="" alt="">-->
+<!--</div>-->
 </body>

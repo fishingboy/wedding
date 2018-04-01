@@ -9,6 +9,15 @@
 
             // 建立下拉選單
             this.buildGroupSelect();
+
+            //
+            var _self = this;
+            $(".photo img, .photo .image-overlay").bind("click", function (event) {
+                _self.fullScreen(event);
+            });
+            $("#overlay-close").bind("click", function (event) {
+                _self.cancelFullScreen(event);
+            });
         }
 
         function buildGroupSelect()
@@ -80,10 +89,28 @@
             $("html,body").animate({scrollTop: top + 'px'}, 1500);
         }
 
+        function fullScreen(event)
+        {
+            $(".photo-overlay").show();
+            var element = $(event.currentTarget);
+            console.log("element", element);
+            var sn = element.attr("photo-sn");
+
+            // 塞入圖片
+            $("#full-photo").attr("src", photos[sn].file);
+        }
+
+        function cancelFullScreen()
+        {
+            $(".photo-overlay").hide();
+        }
+        
         return {
             init : init,
             buildGroupSelect : buildGroupSelect,
             createGuest : createGuest,
+            fullScreen : fullScreen,
+            cancelFullScreen : cancelFullScreen,
             scroll : scroll
         }
     }
