@@ -73,7 +73,7 @@ body{
 .form-content .form-item a.address-btn:active{ opacity: 0.8;}
 
 
-.photo-content {padding:10px; margin: 0 auto; max-width: 1180px;}
+.photo-content {padding:10px; margin: 0 auto; width: 1180px;}
 .photo-content .photo {display: inline-block; margin: 10px; width:266px; height:266px; overflow: hidden; position: relative;}
 .photo-content .photo img {position:absolute; max-width:400px; max-height: 400px;}
 .photo-content .photo img.horizontal {left:-67px;}
@@ -124,6 +124,16 @@ body{
 @media screen and ( max-width:1023px) {
 	.photo-overlay #full-photo {margin:0 auto; width: 100%; height:100%; z-index:2; background-size: 100% auto; background-repeat: no-repeat; background-position: center center;}
 }
+
+@media screen and ( max-width:1179px) {
+	.photo-content {padding:10px; margin: 0 auto; width: 890px;}
+
+}
+
+@media screen and ( max-width:888px) {
+	.photo-content {padding:10px; margin: 0 auto; width: 600px;}
+}
+
 @media screen and ( max-width:415px) {
 	.full-banner-container,
 	.full-banner-container .overlay-bg{ min-height: 100%; }
