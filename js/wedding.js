@@ -97,7 +97,8 @@
             var sn = element.attr("photo-sn");
 
             // 塞入圖片
-            $("#full-photo").attr("src", photos[sn].file);
+            // $("#full-photo").attr("src", photos[sn].file);
+            $("#full-photo").css("background-image", "url(" + photos[sn].file + ")");
         }
 
         function cancelFullScreen()
