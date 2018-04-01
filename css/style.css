@@ -69,7 +69,7 @@ body{
 .form-content a.submit-btn{ max-width: 100%;}
 .form-content .form-item input.address_sm{ width: 120px; margin-right: 5px;}
 .form-content .form-item input.address_lg{ margin-top:5px; }
-.form-content .form-item a.address-btn{ float: left; font-size: 14px; color: #38d; line-height: 30px; display: block; text-decoration: none;}
+.form-content .form-item a.address-btn{font-size: 14px; color: #38d; line-height: 30px; display: block; text-decoration: none;}
 .form-content .form-item a.address-btn:active{ opacity: 0.8;}
 
 
