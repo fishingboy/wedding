@@ -96,6 +96,7 @@
                 say : say
             };
 
+            var _self = this;
             $.ajax
             ({
                 type     : 'POST',
@@ -118,6 +119,7 @@
                             type: "warning"
                         }).then(function () {
                             $('#fm_' + field).focus();
+                            _self.scroll('#fm_' + field, 300);
                         });
                         return false;
                     }
@@ -136,10 +138,11 @@
         }
 
         // 捲動效果
-        function scroll(id)
+        function scroll(id, ms)
         {
             var top = $(id).offset().top - 70;
-            $("html,body").animate({scrollTop: top + 'px'}, 1500);
+            var ms = ms || 1500;
+            $("html,body").animate({scrollTop: top + 'px'}, ms);
             this.hideMenu();
 
             if (id == '#form') {
