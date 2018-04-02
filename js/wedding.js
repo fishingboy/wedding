@@ -141,6 +141,10 @@
             var top = $(id).offset().top - 70;
             $("html,body").animate({scrollTop: top + 'px'}, 1500);
             this.hideMenu();
+
+            if (id == '#form') {
+                $('#fm_name').focus();
+            }
         }
 
         function fullScreen(event)
