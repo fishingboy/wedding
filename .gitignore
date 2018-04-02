@@ -2,6 +2,7 @@
 /apidoc
 /application/cache/*
 /application/config/database.php
+/application/config/admin.php
 .sass-cache
 /node_modules
 .idea/*
