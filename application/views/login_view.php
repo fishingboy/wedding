@@ -22,19 +22,21 @@
 <style>
     .form-box {
         padding: 50px;
-        width: 600px;
+        width: 400px;
         margin: 0 auto;
         border: 1px solid #ccc;
-        border-radius: 50px;
+        border-radius: 20px;
+        margin: 30vh auto;
     }
 </style>
 </head>
 <body>
 <div class="form-box">
+    <h3>後台登入</h3>
     <form action="" method="post">
         <div class="form-group">
             帳號： <input name="user" type="text" class="form-control"> <br>
-            密碼： <input name="password" type="text" class="form-control"> <br>
+            密碼： <input name="password" type="password" class="form-control"> <br>
             <button name="submit" class="btn">登入</button>
         </div>
     </form>
