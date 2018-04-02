@@ -11,7 +11,10 @@ class Admin extends CI_Controller
         $this->load->library("api_lib");
     }
 
-    public function get()
+    public function showList()
     {
+        $guests = $this->guest_serv->getGuests();
+//        echo "<pre>guests = " . json_encode($guests, JSON_PRETTY_PRINT + JSON_UNESCAPED_UNICODE) . "</pre>";
+        $this->load->view("list_view", ['guests' => $guests]);
     }
 }

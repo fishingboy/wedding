@@ -81,5 +81,11 @@ class Guest_serv
 
         return true;
     }
+
+    public function getGuests()
+    {
+        $guests = $this->CI->db->from("guests")->order_by('id', 'asc')->get()->result_array();
+        return $guests;
+    }
 }
 
