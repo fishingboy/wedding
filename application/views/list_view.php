@@ -6,7 +6,8 @@
 <link rel="stylesheet" href="/third-party/bootstrap/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="/third-party/bootstrap/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <style>
-    .base {width:80vw; margin: 0 auto;}
+    .base {}
+    .td100 {width:150px;}
 </style>
 </head>
 <body>
@@ -16,20 +17,20 @@
             <tr>
                 <th></th>
                 <th>姓名</th>
+                <th>關係</th>
                 <th>電話</th>
                 <th>地址</th>
-                <th>出席人數</th>
-                <th>吃素人數</th>
+                <th>出席/吃素人數</th>
                 <th>想說的話</th>
             </tr>
             <?php foreach ($guests as $i => $guest): ?>
                 <tr>
                     <td><?= $i + 1 ?></td>
                     <td><?= $guest['name'] ?></td>
+                    <td><?= $guest['group_name'] ?></td>
                     <td><?= $guest['phone'] ?></td>
-                    <td><?= $guest['postal_code'] . " " . $guest['address'] ?></td>
-                    <td><?= $guest['peoples'] ?></td>
-                    <td><?= $guest['vegan_peoples'] ?></td>
+                    <td class="td100"><?= $guest['postal_code'] . " " . $guest['address'] ?></td>
+                    <td><?= $guest['peoples'] ?>/<?= $guest['vegan_peoples'] ?></td>
                     <td><?= $guest['say'] ?></td>
                 </tr>
             <?php endforeach; ?>

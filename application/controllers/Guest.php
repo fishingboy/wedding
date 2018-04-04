@@ -20,7 +20,7 @@ class Guest extends CI_Controller
         $address       = $this->api_lib->getParam("address");
         $group_id      = $this->api_lib->getParam("group_id");
         $peoples       = $this->api_lib->getParam("peoples");
-        $vegan_peoples = $this->api_lib->getParam("vegan_peoples");
+        $vegan_peoples = $this->api_lib->getParam("vegan_peoples", null, true, 0);
         $say           = $this->api_lib->getParam("say");
 
         $id = $this->guest_serv->create([
