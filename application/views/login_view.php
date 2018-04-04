@@ -24,7 +24,7 @@
     * {box-sizing: border-box;}
     .form-box {
         padding: 50px;
-        width: 400px;
+        width: 350px;
         margin: 0 auto;
         border: 1px solid #ccc;
         border-radius: 20px;
