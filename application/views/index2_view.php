@@ -100,11 +100,11 @@
                 </div>
                 <div class="form-item">
                     <p class="form-title">共幾個人出席 (包含自己)：</p>
-                    <input id='fm_peoples' type="number" placeholder="請填入數字" value="1" min="1">
+                    <input id='fm_peoples' type="number" placeholder="請填入數字" min="1">
                 </div>
                 <div class="form-item">
                     <p class="form-title">共幾位吃素：</p>
-                    <input id='fm_vegan_peoples' type="number" placeholder="請填入數字" value="0" min="0">
+                    <input id='fm_vegan_peoples' type="number" placeholder="請填入數字" min="0">
                 </div>
                 <div class="form-item">
                     <p class="form-title">您的聯絡電話：</p>
