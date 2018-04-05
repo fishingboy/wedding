@@ -20,7 +20,7 @@
                 <th>關係</th>
                 <th>電話</th>
                 <th>地址</th>
-                <th>出席/吃素人數</th>
+                <th>出席/吃素</th>
                 <th>想說的話</th>
             </tr>
             <?php foreach ($guests as $i => $guest): ?>
