@@ -7,7 +7,7 @@
 <script src="/third-party/bootstrap/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <style>
     .base {min-width: 800px;}
-    .td100 {width:150px;}
+    .td-text {width:150px;}
 </style>
 </head>
 <body>
@@ -29,9 +29,9 @@
                     <td><?= $guest['name'] ?></td>
                     <td><?= $guest['group_name'] ?></td>
                     <td><?= $guest['phone'] ?></td>
-                    <td class="td100"><?= $guest['postal_code'] . " " . $guest['address'] ?></td>
+                    <td class="td-text"><?= $guest['postal_code'] . " " . $guest['address'] ?></td>
                     <td><?= $guest['peoples'] ?>/<?= $guest['vegan_peoples'] ?></td>
-                    <td><?= $guest['say'] ?></td>
+                    <td class="td-text"><?= $guest['say'] ?></td>
                 </tr>
             <?php endforeach; ?>
         </table>
