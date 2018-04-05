@@ -87,5 +87,34 @@ class Guest_serv
         $guests = $this->CI->db->from("guests")->order_by('id', 'asc')->get()->result_array();
         return $guests;
     }
+
+    public function getStatistic()
+    {
+        $guests = $this->CI->db->from("guests")
+                 ->join("groups", "guests.group_id=groups.id")
+                 ->get()->result_array();
+        $total = $peoples = $vegan_peoples = [];
+        foreach ($guests as $guest) {
+            $relation = $guest['relation'];
+
+            // 填寫人數
+            $total['total'] = isset($total['total']) ? $total['total'] + 1 : 1;
+            $total[$relation] = isset($total[$relation]) ? $total[$relation] + 1 : 1;
+
+            // 出席人數
+            $peoples['total'] = isset($peoples['total']) ? $peoples['total'] + $guest['peoples'] : $guest['peoples'];
+            $peoples[$relation] = isset($peoples[$relation]) ? $peoples[$relation] + $guest['peoples'] : $guest['peoples'];
+
+            // 吃素
+            $vegan_peoples['total'] = isset($vegan_peoples['total']) ? $vegan_peoples['total'] + $guest['vegan_peoples'] : $guest['vegan_peoples'];
+            $vegan_peoples[$relation] = isset($vegan_peoples[$relation]) ? $vegan_peoples[$relation] + $guest['vegan_peoples'] : $guest['vegan_peoples'];
+        }
+
+        return [
+            'total'         => $total,
+            'peoples'       => $peoples,
+            'vegan_peoples' => $vegan_peoples,
+        ];
+    }
 }
 

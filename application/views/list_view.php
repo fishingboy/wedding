@@ -13,6 +13,21 @@
 <body>
     <div class="base">
         <h1>賓客資料</h1>
+        <div>
+            總填寫人數: <?= $statistic['total']['total'] ?>,
+            男方填寫人數: <?= $statistic['total']['man'] ?>,
+            女方填寫人數: <?= $statistic['total']['women'] ?>
+        </div>
+        <div>
+            總出席人數: <?= $statistic['peoples']['total'] ?>,
+            男方出席人數: <?= $statistic['peoples']['man'] ?>,
+            女方出席人數: <?= $statistic['peoples']['women'] ?>
+        </div>
+        <div>
+            總吃素人數: <?= $statistic['vegan_peoples']['total'] ?>,
+            男方吃素人數: <?= $statistic['vegan_peoples']['man'] ?>,
+            女方吃素人數: <?= $statistic['vegan_peoples']['women'] ?>
+        </div>
         <table class="table table-striped">
             <tr>
                 <th></th>

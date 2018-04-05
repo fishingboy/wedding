@@ -29,6 +29,10 @@ class Admin extends CI_Controller
         }
 
         $guests = $this->guest_serv->getGuests();
-        $this->load->view("list_view", ['guests' => $guests]);
+        $statistic = $this->guest_serv->getStatistic();
+        $this->load->view("list_view", [
+            'guests' => $guests,
+            'statistic' => $statistic
+        ]);
     }
 }
