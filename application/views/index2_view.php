@@ -53,7 +53,7 @@
     </section>
 
     <!-- Date and Location -->
-    <section id='date' class="container white-bg-container">
+    <section id='date' class="container white-bg-container count-down-container">
         <h5 class="title">距離喜宴入席還有</h5>
         <div id="count-down" class="count-down">
             <span class="item" id="countDown-Day">--</span> 天
