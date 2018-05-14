@@ -74,6 +74,12 @@
 
         function createGuest()
         {
+            swal({
+                title: "目前資料已經停止填寫囉！",
+                text: "有什麼問題請直接連絡新郎新娘哦 ^^！"
+            });
+            return false;
+
             var name = $('#fm_name').val();
             // var email = $('#fm_email').val();
             var phone = $('#fm_phone').val();

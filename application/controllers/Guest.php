@@ -13,6 +13,9 @@ class Guest extends CI_Controller
 
     public function create()
     {
+        // 停止填寫
+        $this->api_lib->outputError("name@@@目前表單已停止填寫，請自行連絡新郎新娘哦！");
+
         $name          = $this->api_lib->getParam("name");
         $email         = $this->api_lib->getParam("email");
         $phone         = $this->api_lib->getParam("phone");
