@@ -54,9 +54,20 @@
 
     <!-- Date and Location -->
     <section id='date' class="container white-bg-container">
+        <h5 class="title">距離喜宴入席還有</h5>
+        <div id="count-down" class="count-down">
+            <span class="item" id="countDown-Day">--</span> 天
+            <span class="item" id="countDown-Hour">--</span> 小時
+            <span class="item" id="countDown-Minute">--</span> 分
+            <span class="item" id="countDown-Sec">--</span> 秒
+        </div>
+    </section>
+
+    <!-- Date and Location -->
+    <section id='date' class="container white-bg-container">
         <h5 class="title">結婚日期</h5>
         <div class="text-content">
-            <p class="date-text">2018/06/03 (日) 午宴</p>
+            <p class="date-text">2018/06/03 (日) 12:30 入席</p>
             <p class="location-text">北都大飯店<br>基隆市中正區信二路319號</p>
             <a class="red-btn" href="javascript:wedding.scroll('#form');">出席回覆</a>
         </div>

@@ -46,6 +46,9 @@
             $("#overlay-next").bind("click", function (event) {
                 _self.nextPhoto();
             });
+
+            // 倒數計時
+            window.setInterval(_self.countDown, 1000);
         }
 
         function buildGroupSelect()
@@ -215,6 +218,32 @@
             $(".full-header-fixed ul").addClass("menu-items-hidden");
         }
 
+        // 倒數計時
+        function countDown()
+        {
+            var wedding_time = new Date("2018-06-03 12:30:00");
+            var now = new Date();
+            var diff = parseInt((wedding_time.getTime() - now.getTime()) / 1000);
+
+            // 日
+            var day = parseInt(diff / 86400);
+            $("#countDown-Day").html(day);
+            diff %= 86400;
+
+            // 時
+            var hour = parseInt(diff / 3600);
+            $("#countDown-Hour").html(hour);
+            diff %= 3600;
+
+            // 分
+            var minute = parseInt(diff / 60);
+            $("#countDown-Minute").html(minute);
+
+            // 秒
+            var sec = diff % 60;
+            $("#countDown-Sec").html(sec);
+        }
+
         return {
             sn : sn,
             init : init,
@@ -227,6 +256,7 @@
             setFullScreenPhoto : setFullScreenPhoto,
             showMenu : showMenu,
             hideMenu : hideMenu,
+            countDown : countDown,
             scroll : scroll
         }
     }

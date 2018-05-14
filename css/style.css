@@ -10,6 +10,8 @@ body{
 ::-webkit-input-placeholder { color:#c3c3c3;}
 :-ms-input-placeholder { color:#c3c3c3;}
 
+.count-down {font-size: 30px; text-align: center;}
+
 
 /* Float Containter - 左右區塊 */
 .both-sides-containter{}
