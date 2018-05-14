@@ -81,7 +81,7 @@
                 title: "停止填寫囉！",
                 text: "請直接連絡新郎新娘哦 ^^！"
             });
-            return false;
+            return;
 
             var name = $('#fm_name').val();
             // var email = $('#fm_email').val();
