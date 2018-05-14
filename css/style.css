@@ -64,9 +64,10 @@ body{
 .photo-bg-container{ background:url(../images/img_2.jpg) no-repeat center top transparent; background-size: cover; position: relative;}
 .photo-bg-container .form-block{ background-color: #fff; padding: 40px 10px; margin: 0 auto; border-radius: 20px; max-width: 540px;}
 
-.count-down-container {background: #eee; max-width: none;}
+.count-down-container {background: #eee; max-width: none; width:100%;}
 .count-down-container .title {background: none; padding: 0;}
 .count-down {font-size: 30px; text-align: center;}
+.count-down .item {color: #e76666;}
 
 
 
