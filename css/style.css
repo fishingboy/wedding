@@ -64,12 +64,10 @@ body{
 .photo-bg-container{ background:url(../images/img_2.jpg) no-repeat center top transparent; background-size: cover; position: relative;}
 .photo-bg-container .form-block{ background-color: #fff; padding: 40px 10px; margin: 0 auto; border-radius: 20px; max-width: 540px;}
 
-.count-down-container {background: #eee; max-width: none; width:100%;}
-.count-down-container .title {background: none; padding: 0;}
-.count-down {font-size: 30px; text-align: center;}
-.count-down .item {color: #e76666;}
-
-
+.count-down-container {background: #FcEaEa;max-width: none;width: 100%;}
+.count-down-container .title {background: none;padding: 0;font-size: 24px;color: #000;margin-bottom: 16px;opacity: 0.5;}
+.count-down {font-size: 16px;text-align: center;letter-spacing: 1px;color: rgba(100,100,100,0.7);}
+.count-down .item {color: #F08181;font-size: 32px;}
 
 .form-content{ max-width: 400px; margin: 0 auto; padding: 0 20px;}
 .form-content .form-item{ margin-bottom: 30px; }
