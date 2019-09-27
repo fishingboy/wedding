@@ -225,6 +225,11 @@
             var now = new Date();
             var diff = parseInt((wedding_time.getTime() - now.getTime()) / 1000);
 
+            if (diff < 0) {
+                $("#countDown-Title").html("距離喜宴入席已經過了");
+                diff = diff * -1;
+            }
+
             // 日
             var day = parseInt(diff / 86400);
             $("#countDown-Day").html(day);
